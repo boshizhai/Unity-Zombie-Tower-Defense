@@ -1,0 +1,5 @@
+[
+  {"id":1,"initMoney":500,"HP":100,"imgRes":"SceneAssets/GameScene1","levelName":"中央购物中心","tips":"寻找食物、武器和幸存者，注意控制感染风险。","sceneName":"GameScene1"},
+  {"id":2,"initMoney":600,"HP":150,"imgRes":"SceneAssets/GameScene2","levelName":"废弃医院","tips":"寻找医疗物资，并调查感染源的相关线索。","sceneName":"GameScene2"},
+  {"id":3,"initMoney":700,"HP":200,"imgRes":"SceneAssets/GameScene3","levelName":"幸存者安全屋","tips":"检查装备并准备进入丧尸占领区。","sceneName":"GameScene3"}
+]

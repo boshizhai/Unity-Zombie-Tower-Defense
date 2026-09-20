@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05285408d8da2e241baa2eabad6dd0c4, type: 3}
+  m_Name: SpawnProfile_SpinningModular
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterSpawnConfig
+  waveCount: 4
+  monstersPerWave: 1
+  availableMonsters:
+  - {fileID: 11400000, guid: dc9b752ac6b49e346869dc0d2bb06e4c, type: 2}
+  - {fileID: 11400000, guid: dc6c6c2253dc7f84fa596b7763f50a6f, type: 2}
+  - {fileID: 11400000, guid: 7a8aa2faddff01e479f47c7f358a6d74, type: 2}
+  - {fileID: 11400000, guid: 7cd1746e587083745941b0346beb73c7, type: 2}
+  - {fileID: 11400000, guid: 248787e9ec8424b43a80372baf1cb6fc, type: 2}
+  firstWaveDelay: 12
+  monsterSpawnInterval: 5
+  waveInterval: 8

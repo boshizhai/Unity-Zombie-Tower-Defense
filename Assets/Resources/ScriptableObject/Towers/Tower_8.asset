@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fa5174f792f7e41ba13c96c3f6640e, type: 3}
+  m_Name: Tower_8
+  m_EditorClassIdentifier: Assembly-CSharp::TowerConfig
+  id: 8
+  towerName: "\u7130\u706B\u67AA2"
+  towerPrefab: {fileID: 4426051793060268252, guid: c9786d0e3ef06b14487fb2647cc55e52, type: 3}
+  icon: {fileID: 21300000, guid: ccef10ee8ae91d045b928971f27af52e, type: 3}
+  attackEffectPrefab: {fileID: 5599234054499461509, guid: 26caa874a8c4d0841802b914a0230011, type: 3}
+  buildCost: 350
+  nextUpgrade: {fileID: 11400000, guid: 81ce8dc2a80d5cb44af4998158fa2fef, type: 2}
+  attack: 14
+  attackInterval: 1.8
+  attackRange: 6
+  attackType: 1

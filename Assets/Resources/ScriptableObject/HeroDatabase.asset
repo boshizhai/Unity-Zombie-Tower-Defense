@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e4f8c5be677f84dae0ac1dd9b725f3, type: 3}
+  m_Name: HeroDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::HeroDatabase
+  heroes:
+  - {fileID: 11400000, guid: 6379c303e0d14a549a1df75276d447a0, type: 2}
+  - {fileID: 11400000, guid: ee2a220127a9b664bb4e5b87616df612, type: 2}
+  - {fileID: 11400000, guid: 00e97c92ea87e63419c83f2705242e1a, type: 2}
+  - {fileID: 11400000, guid: 954d7e27d15a1ed4a944f350deaaeac3, type: 2}
+  - {fileID: 11400000, guid: 79024adcf4fb342459e8db0dc2d174d0, type: 2}
+  - {fileID: 11400000, guid: f101e97bc8059304b927b433fbff676e, type: 2}
+  - {fileID: 11400000, guid: 7546a30f180b5e2468ee134c381435b8, type: 2}

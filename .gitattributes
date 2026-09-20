@@ -1,0 +1,77 @@
+* text=auto
+*.cs text eol=lf
+*.md text eol=lf
+*.meta text eol=lf
+*.unity text eol=lf
+*.prefab text eol=lf
+*.json text eol=lf
+*.inputactions text eol=lf
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff01_a.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff01_m.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff01_n.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff02_a.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff02_m.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff02_n.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff03_a.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff03_m.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff03_n.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff04_a.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff04_m.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff04_n.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff05_a.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff05_m.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Models/Rocks/Cliffs/Textures/Cliff05_n.png" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/PureNature/Scenes/Scene_Demo/Scene_Demo_Terrain.asset" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Toon_Zombies_extended/models/Materials/ToonZombies_texture_B.tga" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Grounds/Ground1_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Grounds/Ground1.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Grounds/Ground2_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Grounds/Ground2.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Grounds/Ground3_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Grounds/Ground3.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Grounds/Ground4_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Grounds/Ground4.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Grounds/Ground5_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Grounds/Ground5.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Graveyard_atlas1_AO.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Graveyard_atlas1_m.TIF" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Graveyard_atlas1_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Graveyard_atlas1.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Mausoleum_Atlas_m.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Mausoleum_Atlas_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Mausoleum_Atlas.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Ornaments1_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Ornaments1.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Rocks_AO.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Rocks_m.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Rocks_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Rocks.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Statues_AO.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Statues_m.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Statues_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Statues.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Tombs1_AO.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Tombs1_m.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Tombs1_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Tombs1.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Tombs2_m.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Tombs2_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Tombs2.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Trees_AO.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Trees_Branches.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Trees_m.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Trees_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Top-Down Graveyard/_Origin/Textures/Trees.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Tower Defense/Grounds/Ground_01_winter.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Tower Defense/Grounds/Ground_05_nmp.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Tower Defense/Grounds/Ground_05_winter.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Tower Defense/Grounds/Ground_05.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Tower Defense/Prefabs_props/Textures/Ground_decals_winter.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Tower Defense/Prefabs_props/Textures/Ground_decals.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Tower Defense/Prefabs_props/Textures/Rocks_winter.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Tower Defense/Prefabs_props/Textures/Rocks.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Tower Defense/Prefabs_props/Textures/Stone_elements_Winter.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Tower Defense/Prefabs_props/Textures/Stone_elements.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Tower Defense/Prefabs_props/Textures/Tree_leaves_winter.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/ArtRes/Tower Defense/Prefabs_props/Textures/Tree_leaves.tif" filter=lfs diff=lfs merge=lfs -text
+"Assets/Scenes/GameScene1/NavMesh-Level Environment 1.asset" filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,41 @@
+# Unity generated folders
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uild/
+/[Bb]uilds/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+# IDE and generated solution files
+/.vs/
+/.vscode/
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+/.vsconfig
+# Backups and OS files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+/Assets/_Recovery/
+/Assets/_Recovery.meta
+# Optional source import archives, not runtime assets
+*.unitypackage
+*.unitypackage.meta
+# Local secrets
+.env
+.env.*
+*.pfx
+*.p12
+
+# Machine-local assistant configuration
+**/.claude/
+**/.codex/

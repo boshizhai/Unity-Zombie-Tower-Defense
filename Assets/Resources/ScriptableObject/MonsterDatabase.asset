@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f58cc588ca37ec46b5358d0719a174a, type: 3}
+  m_Name: MonsterDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::MonsterDatabase
+  monsters:
+  - {fileID: 11400000, guid: 56013d733c4acdf4287f92c2ba1329d3, type: 2}
+  - {fileID: 11400000, guid: 75be6e51d68a7214f8e970b6303cdbc0, type: 2}
+  - {fileID: 11400000, guid: 7a8aa2faddff01e479f47c7f358a6d74, type: 2}
+  - {fileID: 11400000, guid: 29574e745fd2b334cae5b8ee1aef24f4, type: 2}
+  - {fileID: 11400000, guid: 34f2bf7f692926c49866677f4abebe67, type: 2}
+  - {fileID: 11400000, guid: dc6c6c2253dc7f84fa596b7763f50a6f, type: 2}
+  - {fileID: 11400000, guid: dc9b752ac6b49e346869dc0d2bb06e4c, type: 2}
+  - {fileID: 11400000, guid: 814c3bbb9d2ea2d48aeea7fd081329d0, type: 2}
+  - {fileID: 11400000, guid: befdfd84e9f34d942b3953a8da8be2dd, type: 2}
+  - {fileID: 11400000, guid: 248787e9ec8424b43a80372baf1cb6fc, type: 2}
+  - {fileID: 11400000, guid: 8d54d06b1c9805e4ba56ac57ea058325, type: 2}
+  - {fileID: 11400000, guid: 7cd1746e587083745941b0346beb73c7, type: 2}

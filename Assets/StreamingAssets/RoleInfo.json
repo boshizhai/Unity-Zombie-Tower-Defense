@@ -1,0 +1,9 @@
+[
+  {"id":1,"res":"Roles/engineer","atk":14,"rotateSpeed":6,"moveSpeed":5,"name":"战械宗师","eff":"eff/1","money":0,"type":0,"intro":" 辅助修理，开局自带"},
+  {"id":2,"res":"Roles/officer","atk":15,"rotateSpeed":6,"moveSpeed":8,"name":"铁血统领","eff":"eff/1","money":500,"type":1,"intro":"指挥机动，低攻高速"},
+  {"id":3,"res":"Roles/infantry","atk":27,"rotateSpeed":4,"moveSpeed":6,"name":"破阵先锋","eff":"eff/1","money":1500,"type":1,"intro":" 均衡主力，战场万金油"},
+  {"id":4,"res":"Roles/flammer","atk":20,"rotateSpeed":3,"moveSpeed":3,"name":"赤焰尖兵","eff":"eff/1","money":2500,"type":1,"intro":"持续灼烧，坦克推进"},
+  {"id":5,"res":"Roles/heavygunner","atk":20,"rotateSpeed":3,"moveSpeed":3,"name":"铁幕风暴","eff":"eff/1","money":3000,"type":1,"intro":" 不动如山，终极前排"},
+  {"id":6,"res":"Roles/sniper","atk":23,"rotateSpeed":4,"moveSpeed":5,"name":"寂灭之眼","eff":"eff/1","money":3500,"type":1,"intro":"一击毙命，远端收割"},
+  {"id":7,"res":"Roles/scout","atk":25,"rotateSpeed":3,"moveSpeed":3,"name":"裂地炮手","eff":"eff/1","money":4000,"type":1,"intro":"范围爆炸，一发入魂"}
+]

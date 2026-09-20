@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54c742702e7fd34fa577188fb91d537, type: 3}
+  m_Name: Hero_Flammer
+  m_EditorClassIdentifier: Assembly-CSharp::HeroConfig
+  id: 4
+  heroName: "\u8D64\u7130\u5C16\u5175"
+  description: "\u6301\u7EED\u707C\u70E7\uFF0C\u5766\u514B\u63A8\u8FDB"
+  heroPrefab: {fileID: 2205002015861454434, guid: 06a531ce52b4d4848b4ca5360826a902, type: 3}
+  attackEffectPrefab: {fileID: 9032262533879450472, guid: 295bb89ef76101c4c9452ff458853233, type: 3}
+  attack: 20
+  moveSpeed: 3
+  rotateSpeed: 3
+  attackType: 1
+  unlockPrice: 2500
