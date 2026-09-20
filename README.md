@@ -1,29 +1,34 @@
 # Unity Zombie Tower Defense
 
-**第三人称射击 × 丧尸塔防｜个人独立开发的 Unity 客户端项目**
+**第三人称射击 × 丧尸塔防**
 
-玩家亲自参与射击战斗，同时通过建造、升级防御塔抵御尸潮并保护主塔。项目串联了英雄展示与长按解锁、关卡选择、异步加载、战斗、胜负结算和进度保存；程序部分包含事件中心、对象池、资源加载、UI 面板管理、配置数据库与关卡管理等模块。
+基于 Unity/C# 开发的第三人称射击与丧尸塔防游戏，玩家参与射击战斗，通过建造、升级防御塔抵御尸潮并保护主塔。项目实现了英雄展示与长按解锁的金币数字动态反馈、关卡选择、通过异步加载场景与进度条衔接关卡、战斗、胜负结算和进度保存。
 
-**技术栈：** Unity 6.4 · C# · Input System · NavMesh · Animator · UGUI / TextMeshPro · ScriptableObject · Coroutine · JSON / LitJson
+采用Input System 处理玩家输入，结合 CharacterController 实现角色移动与重力，通过摄像机与枪口双射线检测实现瞄准和射击命中判定；结合 NavMesh、Animator 与动画事件实现敌人寻路和攻击判定；使用 ScriptableObject 配置与数据库管理英雄、怪物、防御塔及关卡数据，通过泛型事件中心解耦业务与 UI，利用对象池复用怪物、音效和特效。
 
-> 开发形式：个人独立开发。美术、模型、音效和部分插件来自第三方资源；本仓库重点展示游戏逻辑实现与模块组织。
->
-> 演示视频：待补充。<!-- 将此行替换为实际视频链接；可在此处加入实机截图或 GIF。 -->
+构建 GameDataMgr 管理玩家进数据、英雄选择、ScriptableObject配置访问及音频资源，GameLevelMgr 管理关卡初始化、波数、僵尸对象和奖励结算；通过 UIMgr＋BasePanel 实现面板管理与淡入淡出，配合 ResMgr、MonoMgr 提供资源加载和协程支持，并使用 JSON 存档持久保存金币、已解锁英雄及音频设置实现数据持久化。
+
+**技术栈：** Unity3D · C# · Input System · NavMesh · Animator · UGUI · ScriptableObject · Coroutine · JSON / LitJson · Physics.Raycast / OverlapSphereNonAlloc · Coroutine
+
 
 [快速运行](#快速运行) · [核心玩法](#核心玩法) · [模块与源码导航](#模块与源码导航) · [关键实现](#关键实现) · [操作说明](#操作说明)
 
-## 项目看点
 
-| 实现 | 具体做了什么 |
+
+## 核心技术实现
+
+| 模块 | 实现要点 |
 | --- | --- |
-| 长按英雄解锁交互 | 使用 UGUI EventTrigger 处理按下、松开和移出，协程驱动 2 秒进度与金币数字变化，完成后扣款、记录英雄 ID 并保存 |
-| 泛型事件中心 | 用字典与委托实现无参 / 泛型事件，检查事件名及参数类型；连接金币、主塔血量、波数、造塔点、瞄准、音乐和怪物状态通知 |
-| 预制体对象池 | 以源预制体引用区分池，取出时保持未激活，先初始化再激活；复用怪物、音效和粒子特效，处理重复回收及失效对象 |
-| 配置驱动玩法 | ScriptableObject 保存英雄、怪物、塔、关卡和刷怪参数；Database 按 ID 查询；通过 NextUpgrade 引用串联防御塔升级 |
-| 第三人称战斗 | Input System 输入、CharacterController 移动、Animator 动画、射线攻击，以及带俯仰限制和 FOV 过渡的肩侧跟随镜头 |
-| 关卡与持久化 | 区分“怪物死亡”和“死亡动画结束退场”，统一胜负奖励结算；JSON 保存局外金币、已解锁英雄和音频设置 |
+| 角色控制与战斗判定 | 基于 Input System 与 CharacterController 实现移动、重力和瞄准控制；采用摄像机与枪口双射线对齐射击方向，使用 OverlapSphereNonAlloc 实现近战范围检测，通过动画事件同步攻击时机 |
+| 第三人称摄像机 | 实现肩侧跟随、俯仰角限制、位置与旋转平滑，以及瞄准状态下的镜头偏移和 FOV 过渡 |
+| 事件驱动通信 | 基于字典、泛型与委托实现事件中心，提供参数类型校验及监听生命周期管理，解耦战斗状态、关卡逻辑与 UI 刷新 |
+| 对象池与生命周期管理 | 以预制体引用区分对象池，采用“未激活取出—状态重置—激活”流程复用怪物、音效和特效，处理状态残留、重复回收与失效引用 |
+| 配置与数据管理 | 使用 ScriptableObject 和配置数据库组织角色、怪物、防御塔及关卡数据；通过 GameDataMgr 管理全局数据，结合 JSON 保存玩家进度与音频设置 |
+| 关卡流程与结算 | GameLevelMgr 统一管理关卡初始化、波次推进、战斗对象与胜负判定；分离死亡奖励和动画退场时机，通过结束状态标记避免重复结算 |
+| UI 与异步加载 | UIMgr 通过泛型接口统一管理面板，BasePanel 封装淡入淡出与关闭回调；场景异步加载结合进度平滑显示，在加载完成后初始化关卡 |
+| 英雄解锁交互 | 结合 EventTrigger 与协程实现可取消的长按解锁，同步进度和金币数字反馈；分离过程展示与实际扣款，完成后记录英雄 ID 并持久保存 |
 
-上述内容均有对应源码入口。对象池用于减少重复创建 / 销毁，本文不声明未经 Profiler 测量的性能提升比例。
+
 
 ## 核心玩法
 
@@ -131,35 +136,15 @@
 
 面板在 OnEnable / OnDisable 成对订阅和退订，关卡管理器在初始化 / 清理时管理监听。持续状态通过读取当前数据补齐初始显示。事件同步执行；输入回调、动画事件、资源加载回调与直接业务操作保留各自职责。
 
-### 4. 死亡与退场分离，结算只执行一次
 
-```mermaid
-flowchart TD
-    A[怪物生命值归零] --> B[播放死亡动画并发出怪物死亡事件]
-    B --> C[GameLevelMgr 发放局内击杀奖励]
-    C --> D[金币变化事件刷新 HUD]
-    B --> E[死亡动画结束]
-    E --> F[对象池回收并发出怪物退场事件]
-    F --> G[GameLevelMgr 移除怪物并检查出怪是否全部结束]
-    G --> H{全部出怪结束且怪物列表为空?}
-    H -->|是| I[EndGame true]
-    J[主塔血量归零] --> K[主塔摧毁事件]
-    K --> L[EndGame false]
-    I --> M[结束标记防止重复结算]
-    L --> M
-    M --> N[计算奖励并保存 PlayerData]
-    N --> O[展示结算面板]
-```
 
-怪物死亡时立即发击杀奖励；退场时才移出关卡列表并检查胜利，保留死亡动画表现。结算面板仅显示结果，重复刷新文字不会重复发钱。
-
-### 5. UI 与异步加载
+### 4. UI 与异步加载
 
 `UIMgr` 负责面板查找、创建和销毁，`BasePanel` 负责淡入淡出与隐藏完成回调。暂停和结算面板直接设置可见，避免 Time.timeScale 为 0 时淡入停住。
 
 场景加载把 Unity 的 0～0.9 加载进度映射到 0～1，再使用非缩放时间平滑推进显示；进度完成后激活场景，等待加载结束才调用关卡初始化回调。
 
-### 6. 射击与近战判定
+### 5. 射击与近战判定
 
 枪械攻击先从摄像机屏幕中心发射射线确定瞄准点，再从枪口向该位置发射射线，使肩侧镜头与枪口命中方向对齐；末端增加距离补偿，降低表面命中的浮点误差。当前两条射线只检测 Monster 层，环境遮挡判定尚待扩展。
 
@@ -172,7 +157,7 @@ flowchart TD
 - **Unity Editor：6000.4.2f1**，与 [ProjectVersion.txt](ProjectSettings/ProjectVersion.txt) 一致。
 - **Git + Git LFS**：大型美术资源通过 LFS 保存，克隆后需要取得实际文件。
 - 主要包：Input System 1.19.0、AI Navigation 2.0.14、UGUI 2.0.0、Timeline 1.8.12；完整依赖见 [manifest.json](Packages/manifest.json)，锁定版本见 [packages-lock.json](Packages/packages-lock.json)。
-- 建议首先在 Windows Unity 编辑器中运行；其他平台及独立 Player 构建尚未在本次发布中验证。
+
 
 ### 获取与启动
 
@@ -197,11 +182,10 @@ git lfs pull
 
 局外金币、英雄 ID 列表与音乐设置保存在 `Application.persistentDataPath` 下的 PlayerData.json / MusicData.json；不是写回 ScriptableObject 配置。没有存档时创建默认数据，初始钱包为 1000，免费英雄无需购买。
 
-读取器当前优先尝试 StreamingAssets 中的同名默认文件，再读取 persistentDataPath。仓库目前没有默认 PlayerData.json / MusicData.json；后续若添加同名默认存档，需要同时调整读取优先级。
 
 ## 操作说明
 
-以下按键来自 [GameInputActions.inputactions](Assets/Resources/Input/GameInputActions.inputactions)。
+玩家操作定义来自 [GameInputActions.inputactions](Assets/Resources/Input/GameInputActions.inputactions)。
 
 | 操作 | 输入 |
 | --- | --- |
@@ -215,8 +199,7 @@ git lfs pull
 | 暂停 / 继续 | **Backspace** |
 | 选择建造塔 | 1 / 2 / 3，需要靠近可用造塔点 |
 | 升级当前塔 | 空格，需要靠近可升级造塔点 |
-| 解锁英雄 | 按住购买按钮约 2 秒；松开 / 移出取消 |
-| 旋转展示英雄 | 鼠标拖拽模型 |
+
 
 ## 工程目录
 
@@ -237,14 +220,6 @@ Packages/                 # Unity 包清单与版本锁定
 ProjectSettings/          # 项目、输入、层与场景设置
 ```
 
-## 当前范围与后续完善
-
-本仓库展示本地单人玩法与 Unity 客户端模块实现，没有联网、服务端或商业支付功能。
-
-- 当前支持流程独立的暂停 / 提示 / 结算面板；统一暂停原因管理仍可进一步完善。
-- 事件名目前使用字符串，后续可统一常量或类型化事件定义。
-- 后续补充实机视频、自动化回归测试与 Profiler 性能记录。
-- 发布检查和已知边界见 [开发与验证说明](docs/DEVELOPMENT.md)。
 
 ## 资源说明
 
