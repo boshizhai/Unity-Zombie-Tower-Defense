@@ -20,6 +20,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7a8aa2faddff01e479f47c7f358a6d74, type: 2}
   - {fileID: 11400000, guid: 7cd1746e587083745941b0346beb73c7, type: 2}
   - {fileID: 11400000, guid: 248787e9ec8424b43a80372baf1cb6fc, type: 2}
-  firstWaveDelay: 12
-  monsterSpawnInterval: 5
+  firstWaveDelay: 16
+  monsterSpawnInterval: 6
   waveInterval: 8
