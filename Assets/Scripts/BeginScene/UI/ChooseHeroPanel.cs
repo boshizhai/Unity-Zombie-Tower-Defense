@@ -233,7 +233,7 @@ public class ChooseHeroPanel : BasePanel
 
 
             //如果但钱玩家拥有的钱小于0，证明不够支付英雄价格，退出协程，显示提示面板
-            if (haveMoney <= 0)
+            if (haveMoney < 0)
             {
                 ////恢复玩家金币、进度条、英雄价格
                 //imgProgress.fillAmount = 1;
